@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Робота з діалоговими вікнами</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #f3c5f5, #9bcdff);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .dialog-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialog-content">
+        <h1>JavaScript Діалогові Вікна</h1>
+        <script> 
+            "use strict";
+            alert("Моє перше діалогове вікно"); 
+            const answer = confirm("Хочете продовжити виконання сценарію на JavaScript?");
+            if (answer) {
+                const name = prompt("Введіть ваше ім'я", ""); 
+                if (name !== "") {
+                    alert(name + ", вітаю вас, приємно познайомитися");
+                } else {
+                    alert("Ви не ввели своє ім'я");
+                }
+            } else { 
+                alert("Ви відхилили мою пропозицію :(");
+            }
+        </script>
+    </div>
+</body>
+</html>
